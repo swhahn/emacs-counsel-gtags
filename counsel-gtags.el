@@ -248,8 +248,8 @@ Always update if value of this variable is nil."
          (with-temp-buffer
            (let* ((options (cl-case counsel-gtags-path-style
                              (absolute "-Poa")
-                             (root "-Poc")
-                             (relative ""))))
+                             (root "-Poa")
+                             (relative "-Po"))))
              (unless (zerop (process-file "global" nil t nil options))
                (error "Failed: collect file names."))
              (goto-char (point-min))
